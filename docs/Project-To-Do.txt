@@ -1,0 +1,29 @@
+Dev plan
+
+19-jan-2011 (DONE)
+------------------ 
+
+- GUI structure and layout design and development, this just includes the menu structure and the registration of the intents, services, etc... The development and the inclusion of the service feature will be included later on.
+
+Progress note: The development of the main GUI structure has been completed, but we need to finalize the click event listeners development. It is more convenient to have the config client constructing a message object and sending that message object over the http protocol when the user clicks a config submission and update button, this is in contrast to the location update procedure which is basically consists of a background service that is not visibile to the user.
+
+TASK COMPLETED
+
+21-jan-2011 (DONE)
+------------------
+
+- background service for location update and all the needed structural changes and development for the location server sbb and the profile specification. This is an end to end location gathering and update process.
+
+25-jan-2011 (DONE)
+------------------
+
+- plan the GUI design and what call preferences aspects to include and that shall have the effect of deciding what call management features will be included when developing the service manager sbb. 
+
+26-jan-2011
+-----------
+
+- develop the menu as per the plan
+
+- develop the config update client
+
+- develop the service manager sbb for call routing: this sbb shall intercept the INVITE messages sent by the SIP clients and manage the call accordingly as per the config set in the location database.

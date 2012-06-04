@@ -1,0 +1,2 @@
+Show my current location: This menu item will simply display the current location of the user on Google maps.
+

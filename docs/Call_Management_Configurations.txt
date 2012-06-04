@@ -1,0 +1,16 @@
+Call Management Configurations:
+-------------------------------
+@ Location-based routing: The service manager sbb will handle the routing of the incoming calls basing on the rules set by the called user and the location of the called user at the moment the call is received.
+
+@ The user can set various call management rules, these rules serves as the input to the service manager sbb that parse them in order to build its own routing table.
+
+@ There is no need to have multiple types of call management rules, but we need to define the parameters that comprise a CMR --> Call Management Rule.
+
+1- Time-Based call management rules.
+2- Location-Based call management rules.
+3- Proximity: this value is to be expressed in meters which specify how far the user location at the moment the call is received from the configured location point (longitude & latitude) for the CMR to be considered a match.
+4- Incoming caller number or number segment - based rules.
+5- call handling type - reject/accept (this means that if the rule matches with the incoming call, then this action will be taken).(This will enable us to create a call blocking software)
+6- List of the devices to ring.
+7- the order of ringing, either parrallel or sequential (hunting) (or a combination of both, but not necessarily required to have an implementation for that)
+6- at the end of the page, we need to have a couple of buttons to edit and delete the whole CMR.

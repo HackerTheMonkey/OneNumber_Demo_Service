@@ -1,0 +1,46 @@
+Action List:
+
+- The SIP registrar must be able to branch processing of the incoming REGISTER requests basing on the type of the request being received, that is: either an add, remove or query request. This entails the development of the abiltiy to distinguish what type of request is implied within the received register message after a carefull and proper inspection of it.
+
+* Adding/Update Bindings:
+
+there is a normal REGISTER request with AOR and contact header field values.
+
+Note: Processing guidelines should be followed as per indicated after point 6 of the SIP RFC 3261 (10 registrations)
+
+* Remove Bindings: 
+
+the remove bindings contact if there is an expire field/parameter set to zero
+
+Note: Processing guidelines should be followed as per indicated after point 6 of the SIP RFC 3261 (Chap. 10 registrations)
+
+* Query Bindings:
+
+the registrar should know that the given REGISTER request is a query if there are no contact header field or it exist without any field values
+
+Note: Processing guidelines should be followed as per indicated after point 6 of the SIP RFC 3261 (10 registrations)
+
+Note: in all cases, the registrar should respond back with an OK response that contains all of the bindings of the indicated AOR queried from the database.
+
+- The SIP registrar need to make sure and check for the existance of the mandatory header fields in the received REGISTER request and reject and stop the processing of that request (with generating an appropriate response back to the requestor) if one of these mandatory header fields is missing.
+
+Mandatory header fields are:
+1- Request-Uri
+2- To
+3- From
+4- Call-ID
+5- CSeq
+6- Contact (optional)
+
+After conducting the format and validity checks on the received header field and their values, we need to grap some inputs from these fields in order to populate the location database. And these are:
+
+* AOR
+* Contact(s) (each contact need to be saved along with the expire parameter/field value for that specific contact in a certain format to prevent adding an extra complexity to the database structure that is going to be implemented inside the JAIN-SLEE profile specification)
+* Call-ID
+* CSeq
+* 3rd Part Registeration?
+
+- The SIP registrar must compare the request-uri with the AOR, the domains for both URIs must be matching for the processing to continue, otherwise the SIP registrar must respond back with a 404 error message back to the sender.
+
+Note: The location database that we are going to use in here will basically comprise an in-memory database made up of java collection framework and later on that is going to be migrated into a profile specification.
+

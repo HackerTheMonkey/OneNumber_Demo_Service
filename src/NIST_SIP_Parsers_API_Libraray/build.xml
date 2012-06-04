@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<project name="Example JAIN SLEE 1.1 Project" default="deploy" basedir=".">
+
+  <!-- Properties specific to this project -->
+  <property file="build.local.properties" />
+
+  <!-- Common JAIN SLEE build tasks -->
+  <import file="${basedir}/build/jainslee-1.1.xml" />
+  <!-- Common JAIN SLEE Sbb build tasks -->
+  <import file="${basedir}/build/jainslee-1.1-sbb.xml" />
+  <!-- Common JAIN SLEE Libraries build tasks -->
+  <import file="${basedir}/build/jainslee-1.1-library.xml" />
+
+  <!-- Convenience target to deploy the Library -->
+  <target name="deploy" depends="init, deploy-library, deploy-sbb" 
+  	description="Deploy project components"/>
+  <!-- Convenience target to undeploy the Library -->
+  <target name="undeploy" depends="undeploy-sbb, undeploy-library" 
+  	description="Undeploy project components"/>
+  
+</project>

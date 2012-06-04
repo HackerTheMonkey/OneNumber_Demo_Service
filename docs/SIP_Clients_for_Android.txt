@@ -1,0 +1,10 @@
+- http://sipdroid.org/
+
+This is a free application for a SIP client on android, it should be simple and could do the job as required.
+
+- http://www.3cx.com/blog/3cxphone/android/
+
+3CX have ported their nice looking SIP phone software to run on modern android operating systems. however this is still in beta version but it might be easy to use and sufficient for our needs, besides that it is available via the android market for free.
+
+
++ as a conclusion, we can use any of these SIP clients for the android and also for the simple sake of testing, we could simply use the desktop version of x-lite or 3CX to test our application.

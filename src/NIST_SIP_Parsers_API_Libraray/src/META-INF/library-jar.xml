@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE library-jar PUBLIC "-//Sun Microsystems, Inc.//DTD JAIN SLEE Library 1.1//EN"
+    "http://java.sun.com/dtd/slee-library-jar_1_1.dtd">
+
+<library-jar>
+  <library>
+    <library-name>JainSipHeaderParserApi</library-name>
+    <library-vendor>NIST</library-vendor>
+    <library-version>1.2.159</library-version>
+    <jar>
+      <jar-name>jain-sip-ri-1.2.159.jar</jar-name>
+    </jar>
+  </library>
+</library-jar>

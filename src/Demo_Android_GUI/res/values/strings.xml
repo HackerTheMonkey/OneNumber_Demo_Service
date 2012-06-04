@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, MainActivity!</string>
+    <string name="app_name">Rhino Companion</string>
+	<!-- 
+		This is the String array that contains the text of the menu items
+		of the main menu of the application.
+	-->
+	<string-array name="main_menu_items">
+		<item>Edit Call Management Rules</item>
+		<item>List Call Management Rules</item>
+		<item>Show my current location</item>		
+		<item>Show nearby friends</item>
+		<item>Get Shops Information</item>
+		<item>Add new friend</item>
+		<item>Remove Friend</item>
+		<item>Friend Request Notifications</item>
+		<item>Check Balance</item>
+		<item>Top Up</item>
+		<item>Settings</item>
+		<item>About OpenCloud</item>
+	</string-array>
+</resources>
